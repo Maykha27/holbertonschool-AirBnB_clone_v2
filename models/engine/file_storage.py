@@ -57,6 +57,8 @@ class FileStorage:
                         self.all()[key] = classes[val['__class__']](**val)
         except FileNotFoundError:
             pass
+
+
     def delete(self, obj=None):
         """Delete a given object from __objects, if it exists."""
         try:
@@ -64,8 +66,7 @@ class FileStorage:
         except (AttributeError, KeyError):
             pass
 
+
     def close(self):
         """Call the reload method."""
         self.reload()
-
-
