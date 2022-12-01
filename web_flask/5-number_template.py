@@ -8,6 +8,7 @@ Routes:
     (replace underscore _ symbols with a space )
 """
 from flask import Flask
+from flask import render_template
 
 app = Flask(__name__)
 
